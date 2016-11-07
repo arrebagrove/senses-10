@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="senses.Views.SearchLightPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:senses.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Margin="12">
+            <Grid>
+                <RichTextBlock>
+                    <Paragraph FontSize="20" FontWeight="Light">
+                        Add a new light by entering manually its device's ID.
+                        Use this method when the application didn't automatically discovered new lights.
+                    </Paragraph>
+                </RichTextBlock>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBox x:Name="BoxDeviceId" PlaceholderText="Enter the device's ID" MaxLength="6"/>
+                    <TextBlock Text="The device's ID has 6 characters" FontWeight="Light"/>
+
+                    <Button x:Name="SearchButton"
+                            Margin="0,24"
+                            HorizontalAlignment="Center"
+                            Content="Find the light"
+                            Click="SearchButton_Click"/>
+                </StackPanel>
+                
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
